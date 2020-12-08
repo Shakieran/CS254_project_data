@@ -27,8 +27,16 @@ competition_tester.py: A file used to generate dummy data by simulating competit
 
 data_checker.py: A file that helps to verify the data we retrieved is valid
 
-data_loader.py: A file that helps ensure we don't mistakenly fail to interpret the same team as two separate teams (for example, making sure that we don't trick 
+data_loader.py: A file that helps ensure we don't mistakenly fail to interpret the same team as two separate teams (for example, making sure that we don't consider "Akron" as a different team than "Akron Zips", since the mascot of Akron is the Zips, whatever they may be)
+
+data_prep.py: A file that takes the dummy data and converts it into data usable by the neural network. It outputs input files (x), team files that say which teams played a given game (t), and the true values that we want to train the network to learn (y). The files this outputs can be seen in the google drive links.
 
 dictionary_maker.xlsx: A excel sheet used in conjunction with byhand.py to get necessary data for data_loader.py
 
-tournamnet_visualization.xlsx:
+final_getter_efficient: The ultimate file we used to get data from https://stats.ncaa.org/, downloading all Women's Soccer games it can.
+
+tournamnet_visualization.xlsx: Used to visualize the tournament while constructing competition_tester.py
+
+true_data_prep.py: Prepares the actual data from https://stats.ncaa.org/ to be inputted into the neural network, like the dummy data but without y values calculated since we don't know them.
+
+url.py: The old way we got data from https://stats.ncaa.org/ that we stopped using due to inefficiency and etc.
